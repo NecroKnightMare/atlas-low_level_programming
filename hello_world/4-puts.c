@@ -4,7 +4,6 @@
  * @void: no arguements
  *
  * Description : print string with puts command
- * puts : puts("string input")
  * Return : success
 */
 
