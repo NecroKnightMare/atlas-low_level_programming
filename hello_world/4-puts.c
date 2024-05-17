@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
  * main - void
- * @ : no arguements
+ * @: no parameters
  *
- * Description : print string with puts command
- * Return : Always success (0)
+ * Description: print string with puts command
+ * Return: Always success (0)
 */
 
 int main(void)
