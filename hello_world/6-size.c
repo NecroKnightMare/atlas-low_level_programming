@@ -7,9 +7,9 @@
 
 int main(void)
 {
-	printf("Size of (int) = %d bytes \n" (sizeof(intType));
-	printf("Size of (float) =  %d bytes \n" (sizeof(floatType));
-	printf("Size of (double) = %d bytes \n" (sizeof(doubleType));
-	printf("Size of (char) = %d bytes \n" (sizeof(charType));
+	printf("sizeof(int) = %d bytes \n" (sizeof(int));
+	printf("sizeof(float) =  %d bytes \n" (sizeof(float));
+	printf("sizeof(double) = %d bytes \n" (sizeof(double));
+	printf("sizeof(char) = %d bytes \n" (sizeof(char));
 	return 0;
 }
