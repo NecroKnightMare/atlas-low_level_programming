@@ -5,7 +5,7 @@
  *
  * Description : print string with puts command
  * puts : puts("string input")
- * Return : the value of 0
+ * Return : success
 */
 
 
