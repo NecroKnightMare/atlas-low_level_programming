@@ -4,7 +4,7 @@
  * @void: no arguements
  *
  * Description : print string with puts command
- * Return : 0
+ * Return : 0 success
 */
 
 
