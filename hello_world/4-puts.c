@@ -1,8 +1,11 @@
 #include <stdio.h>
-/*
+/**
  * main - entry point
- * print with puts
- * return 0:wq success
+ * @void: no arguements
+ *
+ * Description : print string with puts command
+ * puts : puts("string input")
+ * Return :  success
 */
 
 
