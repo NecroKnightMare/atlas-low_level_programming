@@ -1,12 +1,11 @@
 #include <stdio.h>
 /**
  * main - void
- * @void: no arguements
+ * @ : no arguements
  *
  * Description : print string with puts command
  * Return : Always success (0)
 */
-
 
 int main(void)
 {
