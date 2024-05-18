@@ -8,7 +8,7 @@
 **/
 int main(void)
 {
-	if(int i = 0; i <= 9; i++)
+	if(i = 0; i <= 9; i++)
 {
 		printf(i);
 }
