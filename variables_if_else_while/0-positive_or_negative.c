@@ -17,15 +17,18 @@ int main(void)
 	
 	if (n > 0)
 {
-		putchar(n " is positive\n");
+		putchar(n);
+		printf("is positive\n")
 }	
 	else if (n == 0)
 {
-		putchar(n " is zero\n");
+		putchar(n) 
+		printf(" is zero\n");
 {
 	else (n < 0)
 {
-		putchar(n " is negative\n");
+		putchar(n)
+		printf(" is negative\n");
 }
 	return (0);
 }
