@@ -11,8 +11,8 @@ int main(void)
 {
 	int i = 'a';
 
-	while (i <= 'z\n'){
-	putchar(i);
+	while (i <= 'z'){
+	putchar(i\n);
 	i++;}
 	return (0);
 }
