@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - void
  * @: no parameters
@@ -7,10 +8,11 @@
  * Return: Always success (0)
 */
 int main(void)
-	putchar letter;
-
-	while (letter = 'a'; letter ,= 'z'; letter++)
 {
-	putchar("letter");
+	int i = 'a';
+
+	while (i <= 'z'){
+	putchar(i);
+	i++;}
 	return (0);
 }
