@@ -8,14 +8,14 @@
 **/
 int main(void)
 {
-	int i = 'a';
+	char i;
 
-	while (i <= 'z')
+	for(i = 'a'; i <= 'z'; i++)
 {
-	putchar(i);
-	i++;
+		if(i!= 'e' && i!= 'q')
+{
+			putchar("%c", i);
 }
-	putchar('\n');
+}
 	return (0);
 }
-| grep -i [eq]
