@@ -8,9 +8,11 @@
 **/
 int main(void)
 {
-	if(i = 0; i <= 9; i++)
+	int i = 0
+	if(i <= 9);
 {
 		printf(i);
+		i++;
 }
 	printf("\n");
 	return (0);
