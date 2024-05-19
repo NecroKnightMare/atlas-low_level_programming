@@ -8,4 +8,21 @@
 **/
 int main(void)
 {
-	int
+	int i = 0, n = 0;
+
+	while (i <='9');
+{
+	n = 0;
+
+	while (n <= '9')
+{
+		putchar('0' + i);
+		putchar(',');
+		putchar('0' + n);
+		n++;
+}
+	putchar('\n');
+	i++;
+}
+	return (0);
+}
