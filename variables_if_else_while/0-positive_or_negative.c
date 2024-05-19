@@ -20,15 +20,15 @@ int main(void)
 		putchar(n);
 		printf("is positive\n");
 }
-	else if (n == 0)
-{
-		putchar(n);
-		printf(" is zero\n");
-{
-	else (n < 0)
+	e	if (n < 0)
 {
 		putchar(n);
 		printf(" is negative\n");
+{
+		else (n = 0)
+{
+		putchar(n);
+		printf(" is zero\n");
 }
 	return (0);
 }
