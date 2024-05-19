@@ -20,7 +20,7 @@ int main(void)
 		putchar(n);
 		printf("is positive\n");
 }
-	e	if (n < 0)
+		if (n < 0)
 {
 		putchar(n);
 		printf(" is negative\n");
