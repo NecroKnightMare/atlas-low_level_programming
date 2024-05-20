@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <stdio>
+#include <main.h>
 /**
  * main - void
  * @: no parameters
@@ -9,5 +10,6 @@
 int main(void)
 {
 	printf("_putchar");
+	putchar('\n');
 	return (0);
 }
