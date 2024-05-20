@@ -7,12 +7,12 @@ void print_alphabet(void);
 
 /**
  * main - void
- * @: no parameters
+ * @: change function
  *
  * Description: print alpha in lower case
  * Return: Always success (0)
 **/
-// main.c
+
 #include <stdio.h>
 #include "main.h"
 
