@@ -1,11 +1,15 @@
+#ifndef _main_h
+#define _main_h
 #include "main.h"
+
 /**
- * main - void
+ * main - check the code
  * @: no parameters
  *
  * Description: print _putchar
  * Return: Always success (0)
 **/
+
 int main(void)
 {
 	_putchar("_putchar");
