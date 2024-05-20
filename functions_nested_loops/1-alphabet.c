@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - void
@@ -7,10 +7,11 @@
  * Description: print alpha in lower case
  * Return: Always success (0)
 **/
-int main(void)
+void _putchar(char c)
 {
-	int = 'a'
-	
+}
+int main(void)
+{	
 	while (i <= 'z')
 {
 		_putchar(i);
