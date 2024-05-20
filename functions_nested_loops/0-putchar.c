@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(char c);
+void _putchar(char c);
 
 #endif
 
@@ -15,7 +15,7 @@ int _putchar(char c);
  * Return: Always success (0)
 **/
 
-int main(void)
+int main(void);
 {
 	_putchar("_putchar");
 	_putchar('\n');
