@@ -1,5 +1,5 @@
 #include <stdio>
-#include <main.h>
+#include "main.h"
 /**
  * main - void
  * @: no parameters
@@ -9,7 +9,7 @@
 **/
 int main(void)
 {
-	printf("_putchar");
+	putchar("_putchar");
 	putchar('\n');
 	return (0);
 }
