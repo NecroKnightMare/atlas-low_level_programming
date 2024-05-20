@@ -8,7 +8,7 @@
  * Return: Always success (0)
 **/
 
-void _putchar(printf);
+int _putchar(void);
 {
 	_putchar("_putchar");
 	_putchar('\n');
