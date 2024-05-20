@@ -7,16 +7,8 @@
  * Description: print alpha in lower case
  * Return: Always success (0)
 **/
-void _putchar(char c)
-{
-}
 int main(void)
 {	
-	while (i <= 'z')
-{
-		_putchar(i);
-		i++;
-}
-	_putchar('\n');
+	print_alphabet();
 	return (0);
 }
