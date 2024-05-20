@@ -1,9 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - _putchar
- * @: change function
+ * _putchar - prints string
+ * @c: char
  *
  * Description: print alpha in lower case
  * Return: Always success (0)
@@ -11,12 +10,12 @@
 
 int _putchar(char c);
 {
-    char l = 'a';
+    char c = 'a';
 
-    while (l <= 'z')
+    while (c <= 'z')
 {
-        _putchar(l);
-	l++;
+        _putchar(c);
+	c++;
 }
     _putchar('\n');
     return (0)
