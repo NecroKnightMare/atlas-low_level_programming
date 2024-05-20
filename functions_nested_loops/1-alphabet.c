@@ -1,35 +1,22 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-void print_alphabet(void);
-
-#endif
+#include <stdio.h>
 
 /**
- * main - void
+ * main - _putchar
  * @: change function
  *
  * Description: print alpha in lower case
  * Return: Always success (0)
 **/
 
-#include <stdio.h>
-#include "main.h"
-
-void print_alphabet(void)
+int _putchar(char c);
 {
-    char letter = 'a';
+    char l = 'a';
 
-    while (letter <= 'z')
+    while (l <= 'z')
 {
-        _putchar(letter);
-	letter++;
+        _putchar(l);
+	l++;
 }
     _putchar('\n');
-}
-
-int main(void)
-{
-    print_alphabet();
-    return 0;
+    return (0)
 }
