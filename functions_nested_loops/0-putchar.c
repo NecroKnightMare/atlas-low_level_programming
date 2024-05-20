@@ -1,23 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
-
-void _putchar(char c);
-
-#endif
-
 #include "main.h"
 
 /**
- * main - check the code
- * @: no parameters
+ * main - define function
+ * @: no putchar
  *
  * Description: print _putchar
  * Return: Always success (0)
 **/
 
-int main(void);
+void _putchar(putchar);
 {
-	_putchar("_putchar");
-	_putchar('\n');
+	_putchar("_putchar\n");
 	return (0);
 }
