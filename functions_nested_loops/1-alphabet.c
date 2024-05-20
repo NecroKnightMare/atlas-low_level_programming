@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _putchar - prints string
- * @c: char
+ * print_alphabet - prints string
+ * @: no parameters 
  *
  * Description: print alpha in lower case
  * Return: Always success (0)
