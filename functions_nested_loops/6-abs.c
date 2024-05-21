@@ -2,7 +2,7 @@
 
 /**
  * _abs - absolute value
- * @: no parameters
+ * @n: int
  *
  * Description: print alpha in lower with new line
  * Return: Always success (0)
