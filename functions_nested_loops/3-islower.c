@@ -1,11 +1,19 @@
 #include "main.h"
 
 /**
- * main - void
+ * _islower - checks if a letter is lowercase
  * @: no parameters
  *
- * Description: print alpha in lower with new line
+ * Description: print 
  * Return: Always success (0)
 **/
-int main(void)
+
+int _islower(int c)
 {
+	if (c >= 'a' && c <= 'z')
+		_putchar('\n');
+		return (1);
+	else
+		_putchar('\n');
+		return (0);
+}
