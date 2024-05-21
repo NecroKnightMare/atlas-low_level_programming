@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - print pos neg or zero to random n
+ * main - print pos neg or zero to random number
  * @n: random parameter
  *
  * Return: Always Success (0)
