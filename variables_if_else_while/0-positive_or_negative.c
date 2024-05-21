@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - void
- * @: no parameters
+ * main - 
+ * @n: 
  *
  * Return: Always Success (0)
 */
@@ -17,18 +17,16 @@ int main(void)
 
 	if (n > 0)
 {
-		putchar(n);
-		printf("is positive\n");
+		printf("%d is positive", n);
 }
-		if (n < 0)
+	else if (n < 0)
 {
-		putchar(n);
-		printf("is negative\n");
+		printf("%d is negative", n);
 }
-		else (n = 0);
+	else
 {
-		putchar(n);
-		printf("is zero\n");
+		printf("%d is zero", n);
 }
+	putchar('\n');
 	return (0);
 }
