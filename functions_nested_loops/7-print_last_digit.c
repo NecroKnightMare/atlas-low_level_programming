@@ -7,7 +7,7 @@
  * Description: print alpha in lower with new line
  * Return: Always success (0)
 **/
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	int last_digit = n % 10;
 
