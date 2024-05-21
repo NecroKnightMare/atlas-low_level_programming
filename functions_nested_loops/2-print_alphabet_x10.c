@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - void
+ * print_alphabet_10x - void
  * @: no parameters
  *
  * Description: print alpha ten times
