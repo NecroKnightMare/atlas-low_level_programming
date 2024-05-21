@@ -2,7 +2,7 @@
 
 /**
  * print_sign - void
- * @: no parameters
+ * @n: signs
  *
  * Description: print alpha in lower with new line
  * Return: Always success (0)
