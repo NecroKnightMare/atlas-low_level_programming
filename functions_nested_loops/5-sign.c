@@ -1,11 +1,27 @@
 #include "main.h"
 
 /**
- * main - void
+ * print_sign - void
  * @: no parameters
  *
  * Description: print alpha in lower with new line
  * Return: Always success (0)
 **/
-int main(void)
+int print_sign(int n)
 {
+	if (n > 0)
+{
+		_putchar('+');
+		return (1);
+}
+	else if (n == 0)
+{
+		_putchar('0');
+		return (0);
+}
+	else
+{
+		_putchar('-');
+		return(-1);
+}
+}
