@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - 
- * @n: 
+ * main - print pos neg or zero to random n
+ * @n: random parameter
  *
  * Return: Always Success (0)
 */
