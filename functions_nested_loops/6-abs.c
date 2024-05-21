@@ -9,7 +9,8 @@
 **/
 int _abs(int)
 {
-	int n;
+	n = abs num;
+
 	if (n >= 0)
 {
 		return (n);
