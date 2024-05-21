@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * main - print pos neg or zero to random number
- * @n: random parameter
+ * @: no parameter
  *
  * Return: Always Success (0)
 */
