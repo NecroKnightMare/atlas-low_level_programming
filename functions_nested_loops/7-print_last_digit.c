@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - void
- * @: no parameters
+ * @n: last digit
  *
  * Description: print alpha in lower with new line
  * Return: Always success (0)
