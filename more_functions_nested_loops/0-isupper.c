@@ -10,13 +10,18 @@
 int _isupper(int c)
 {
 	c = 67;
+        c++;
 
-	if (c == 67)
+	if (c <=66)
 {
-		return 1;
+		return 0;
+}
+	else if (c>=68)
+{
+		return 0;
 }
 	else 
 {
-		return 0;
+		return 1;
 }
 }
