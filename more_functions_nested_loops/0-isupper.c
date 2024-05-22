@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 
 /**
  * _isupper - ret one if c is upper
@@ -10,13 +9,12 @@
 
 int _isupper(int c)
 {
-
-	if (isupper(c) == 67)
-{
+	if (c >= 66 && c <= 90)
+	{
 		return 1;
-}
-	else (islower(c));
-{
+	}
+	if (c >= 98 && c <= 122)
+	{
 		return 0;
-}
+	}
 }
