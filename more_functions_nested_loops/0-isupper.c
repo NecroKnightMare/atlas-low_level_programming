@@ -12,11 +12,11 @@ int _isupper(int c)
 {
 	c = 'C';
 
-	if (isupper(c))
+	if (c == 'C')
 {
 		return 1;
 }
-	else (islower(c));
+	else 
 {
 		return 0;
 }
