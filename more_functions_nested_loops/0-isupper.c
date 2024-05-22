@@ -9,9 +9,9 @@
 
 int _isupper(int c)
 {
-	c = 'C';
+	c = 67;
 
-	if (c == 'C')
+	if (c == 67)
 {
 		return 1;
 }
