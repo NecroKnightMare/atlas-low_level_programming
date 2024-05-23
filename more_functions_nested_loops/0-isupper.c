@@ -9,11 +9,11 @@
 
 int _isupper(int c)
 {
-	if (c >= 66 && c <= 90)
+	if ((c >= 'a' && c <= 122) || (c >= 'A' && c <= 90))
 	{
 		return 1;
 	}
-	if (c >= 98 && c <= 122)
+	else
 	{
 		return 0;
 	}
