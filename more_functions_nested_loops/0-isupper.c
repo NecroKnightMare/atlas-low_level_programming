@@ -8,7 +8,7 @@
 
 int _isupper(int c)
 {
-	for (i = 32; i <= 126; i++)
+	for (c = 32; c <= 126; c++)
 	{
 	}
 	return 0;
