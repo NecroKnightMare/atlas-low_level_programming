@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _isupper - ret one if c is upper
@@ -9,12 +8,8 @@
 
 int _isupper(int c)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	for (i = 32; i <= 126; i++)
 	{
-		return 1;
 	}
-	else
-	{
-		return 0;
-	}
+	return 0;
 }
