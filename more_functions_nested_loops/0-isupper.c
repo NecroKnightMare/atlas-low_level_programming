@@ -11,6 +11,7 @@ int _isupper(int c)
 {
 	for (c = 32 ; c <= 126; c++)
 	{
+		return 1;
 	}
 	return 0;
 }
