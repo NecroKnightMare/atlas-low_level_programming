@@ -5,7 +5,7 @@
  * mul - multiply
  * @a: int a
  * @b: int b
- * Returns: 0 successful
+ * Return: 0 successful a times b
 */
 
 int mul(int a, int b)
