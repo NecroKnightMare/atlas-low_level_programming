@@ -1,19 +1,17 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _isdigit - 0-9 
- * @c: integer
- * Returns: 1 if digit o otherwise
+ * mul - multiply 
+ * @a: int a
+ * @b: int b
+ * Returns: 0 successful
 */
 
-int _isdigit(int c)
+int mul(int a, int b)
 {
-	int c;
-	for (c = 0; c <= 9; c++)
+	return (a * b);
 {
-		if (c >=65)
-{
-			return 0;
 }
-}
+	return 0;
 }
