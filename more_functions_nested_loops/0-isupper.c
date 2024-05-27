@@ -9,9 +9,8 @@
 
 int _isupper(int c)
 {
-	for (c = 32; c <= 126; c++)
+	for (c = 32 ; c <= 126; c++)
 	{
-		printf("%d", c);
 	}
 	return 0;
 }
