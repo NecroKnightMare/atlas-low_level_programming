@@ -9,7 +9,7 @@
 
 int _isupper(int c)
 {
-	for (c = 32 ; c <= 126; c++)
+	for (c = 65 ; c <= 90; c++)
 	{
 		return 1;
 	}
