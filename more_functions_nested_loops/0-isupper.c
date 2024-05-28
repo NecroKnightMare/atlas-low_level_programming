@@ -1,20 +1,13 @@
-#include <stdio.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
  * _isupper - ret one if c is upper
  * @c: character parameter
- * Return: 1 if c and 0 if success
+ * Return: 1 if upper and 0 if not
 */
 
 int _isupper(int c)
 {
-	if ((c = 'A') && ( c <= 'Z'))
-	{
-		return (1);
-	}
-	else
-{
-	return (0);
-}
+	return isupper(c);
 }
