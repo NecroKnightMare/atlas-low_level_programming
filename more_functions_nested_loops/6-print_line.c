@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_diagonal - print slashes
+ * print_line - underscores
  * @n: character
  * Return: 1 void
 */
 
-void print_diagonal(int n)
+void print_line(int n)
 {
 	if (n <= 0)
 {
