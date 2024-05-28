@@ -3,14 +3,13 @@
 /**
  * print_numbers: void
  * @: no parameters
- * Return: ) successful
+ * Return: void 1
 */
 
 void print_numbers(void)
 {
 	for (i = 0; i <=9; i++)
 {
-		_putchar("%d\n", i);
-		return (0);
+		_putchar("%c\n", i);
 }
 }
