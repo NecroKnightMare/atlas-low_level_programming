@@ -8,10 +8,10 @@
 
 void print_rev(char *s)
 {
-	if (*s)
+	if (!*s)
 {
+		_putchar('\n');
+}
 		print_rev(s + 1);
 		_putchar(*s);
-}
-	_putchar('\n');
 }
