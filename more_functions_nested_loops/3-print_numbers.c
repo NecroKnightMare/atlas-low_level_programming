@@ -3,6 +3,8 @@
 /**
  * print_numbers: void
  * @: no parameters
+ *
+ * Description: print 0-9 followed by new line
  * Return: void 1
 */
 
