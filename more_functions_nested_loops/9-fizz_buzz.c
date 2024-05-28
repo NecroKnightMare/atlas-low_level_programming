@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- * _putchar - void
- * @: no parameters
+ * _putchar - print
+ * @c: characters
  * Return: 0 success
 */
 
-int main(void)
+int _putchar(char c)
 {
 	int i;
 	int _putchar(char c);
