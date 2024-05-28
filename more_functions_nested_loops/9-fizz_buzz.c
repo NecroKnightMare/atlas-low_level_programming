@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
+
 /**
  * main - void
  * @: no parameters
@@ -14,18 +15,18 @@ int main(void)
 {
 		if ((i % 3 == 0) && (i % 5 == 0))
 {
-			printf("FizzBuzz\t");
+			printf("FizzBuzz ");
 }
 		else if (i % 3 == 0)
 {
-			printf("Fizz\t");
+			printf("Fizz ");
 }
 		else if (i % 5 == 0)
 {
-			printf("Buzz\t");
+			printf("Buzz ");
 }
 		else
-			_putchar('\t');
+			_putchar(' ');
 }
 	return (0);
 }
