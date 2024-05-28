@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - void
+ * _putchar - void
  * @: no parameters
  * Return: 0 success
 */
@@ -11,6 +11,7 @@ int main(void)
 {
 	int i;
 	int _putchar(char c);
+	
 	for (i =1; i <= 100; i++)
 {
 		if ((i % 3 == 0) && (i % 5 == 0))
