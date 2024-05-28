@@ -2,15 +2,14 @@
 #include "main.h"
 
 /**
- * _putchar - print
+ * main - void
  * @c: characters
  * Return: 0 success
 */
 
-int _putchar(char c)
+int main(void)
 {
 	int i;
-	int _putchar(char c);
 	
 	for (i =1; i <= 100; i++)
 {
