@@ -9,5 +9,4 @@
 int _strlen(char *s)
 {
 	return (_strlen(s));
-	return (0);
 }
