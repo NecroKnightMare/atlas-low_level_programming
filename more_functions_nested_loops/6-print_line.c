@@ -1,5 +1,23 @@
-#include <main.h>
+#include "main.h"
+
 /**
- *  - 
- * @: 
- * Returns: 
+ * print_diagonal - print slashes
+ * @n: character
+ * Return: 1 void
+*/
+
+void print_diagonal(int n)
+{
+	if (n <= 0)
+{
+		_putchar('\n');
+}
+	else
+{
+		for (i = 0; i < n; i++)
+{
+			_putchar('_');
+}
+		_putchar('\n');
+}
+}
