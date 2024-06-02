@@ -2,10 +2,10 @@
 
 /**
  * _strcat - appends concatonate string to dest
- * @: no paramenters
- * Returns: dest
+ * @dest: string 1
+ * @src: string 2
+ * Return: dest
 **/
-
 char *_strcat(char *dest, char *src)
 {
 	char *result = dest;
