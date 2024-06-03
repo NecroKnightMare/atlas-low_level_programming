@@ -2,17 +2,17 @@
 
 /**
  * *string_toupper - upper case string
- * @*: pointer
+ * @str: string
  * Return: 0
 **/
-char *string_toupper(char *)
+char *string_toupper(char *str)
 {
 	int i;
 
 	for (i = 0; i != '\0'; i++)
 {
-		if (i >= 'a' && i <= 'z')
-			i -= 32;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
 }
 	return (0);
 }
