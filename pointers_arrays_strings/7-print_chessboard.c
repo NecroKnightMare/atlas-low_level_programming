@@ -10,10 +10,10 @@ void print_chessboard(char (*a)[8])
 	int row = 0;
 	int col = 0;
 
-	while (row < 8)
+	while (row < [8])
 {
 		row++;
-		while (col < 8)
+		while (col < [8])
 {
 			col++;
 			_putchar(a[row][col]);
