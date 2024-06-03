@@ -13,6 +13,7 @@ char *cap_string(char *str)
 {
 		if (str[i] >= 'a' && str[i] <= 'z')
 {
+			i++;
 }
 		if (str[i - i] == ',' ||
 			str[i - i] == ';' ||
