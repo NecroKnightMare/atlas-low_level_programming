@@ -8,3 +8,14 @@
 **/
 char *_strpbrk(char *s, char *accept)
 {
+	while (*s)
+{
+		accept ++;
+		s++;
+		if (*s != *accept)
+{
+			return ('\0');
+}
+}
+	return (s);
+}
