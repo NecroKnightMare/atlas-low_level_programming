@@ -9,9 +9,9 @@
 
 void print_rev(char *s)
 {
-	if (*s)
+	while (*s != '\0')
 {
-		print_rev(s + 1);
+		s--;
 		_putchar(*s);
 }
 }
