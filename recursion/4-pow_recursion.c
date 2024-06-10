@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int - power of
+ * _pow_recursion - power of
  * @x: variable
  * @y: variable
  * Return: -1 if y is negative
