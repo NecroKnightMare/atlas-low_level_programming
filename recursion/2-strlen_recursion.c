@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * void - prints a string
+ * int - return length of string
  * @s: string
  * Return: 0
 **/
-void _puts_recursion(char *s)
+int _strlen_recursion(char *s)
 {
 	return(0);
 }
