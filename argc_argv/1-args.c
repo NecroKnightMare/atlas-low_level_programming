@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *main - print value of file
- *@argc:
- *@argv:
+ * main - print value of file
+ * @argc: value
+ * @argv: file
+ * Return: 0
 **/
 int main(int argc, char* argv[])
 {
