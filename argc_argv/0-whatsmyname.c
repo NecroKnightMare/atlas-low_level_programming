@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * main - renames file
- * @argc:
- * @argv:
+ * @argc: file name
+ * @argv: new file name
  * Return: 0
 **/
 int main(int argc, char *argv[])
