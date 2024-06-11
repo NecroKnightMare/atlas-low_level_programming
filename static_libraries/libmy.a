@@ -1,8 +1,3 @@
-#include "main.h"
-/**
-* Description: files/library
-* Return: nothing
-**/
 0-isupper.o
 0-memset.o
 0-strcat.o
