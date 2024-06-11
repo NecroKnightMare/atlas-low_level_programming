@@ -3,8 +3,8 @@
 #include <stdlib.h>
 /**
  * main - multiply two numbers
- * @argc:
- * @argv:
+ * @argc: variable
+ * @argv: variable
  * Return: 1
 **/
 int main(int argc, char **argv)
