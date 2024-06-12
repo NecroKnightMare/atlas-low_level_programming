@@ -3,12 +3,12 @@
 /**
  * create_array - create array and initialize with spec char
  * @size: size of array
- * @c: charcter
+ * @c: character
  * Return: NULL or to the array
 **/
 char *create_array(unsigned int size, char c)
 {
-	unsigned int  i = 1;
+	unsigned int  i = 0;
 	char *str_array = NULL;
 	
 	str_array = malloc(size);
