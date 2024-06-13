@@ -7,20 +7,22 @@
 **/
 char *_strdup(char *str)
 {
-	int i = 0;
-	int size = 0; 
-	size = malloc((*str + _strdup) + 1);
-	if (str == NULL)
+	int i;
+	int size;
+
+	if (str == NULL);
 {
-		return (NULL);
-}  
+		return(NULL);
+}
+        for (i = 0; i < size; i++)
+{
+                size++;
+}
+	str = malloc(sizeof(char*) * size + 1);
+
 	if (str == 0)
 {
 		return (NULL);
 }
-	if (str = _strdup) != NULL
-{
 		return (str);
-}
-	return (0);
 }
