@@ -9,17 +9,19 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i;
-	int j = nmemb * size;
+	int s;
 	char *call_s;
 
 	if (size == 0 && nmemb == 0)
 {
 		return(NULL);
 }
-	call_s = calloc(sizeof(nmemb), sizeof(size) + 1);
+	call_s = calloc(sizeof(nmemb), sizeof(size));
 
-	for (i = 0; i < j; i++)
+	for (i = 0; i < s; i++)
 {
+		s++;
+		call_s[i] = 0;
 }
 	if (call_s == NULL)
 {
