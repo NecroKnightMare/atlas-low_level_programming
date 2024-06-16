@@ -9,5 +9,15 @@
 char *str_concat(char *s1, char *s2)
 {
 	int i;
+	char *ptr;
 
+	if (s1 == NULL && s2 == NULL)
+{
+		return (NULL);
+}
+	for (i = 0; s2 < s1; i++)
+{
+}
+	ptr = malloc((sizeof(s1) + sizeof(s2)) * sizeof(char) + 1);
+	return (ptr);
 }
