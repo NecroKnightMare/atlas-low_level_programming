@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 		return(NULL);
 }
-	call_s = calloc(j);
+	call_s = calloc(sizeof(nmemb), sizeof(size) + 1);
 
 	for (i = 0; i < j; i++)
 {
