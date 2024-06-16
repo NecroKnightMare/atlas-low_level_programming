@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * _strdup - duplicate string in malloc
  * @str: string
@@ -8,19 +9,18 @@
 char *_strdup(char *str)
 {
 	int i;
-	char s;
 
 	if (str == NULL)
 {
 		return(NULL);
 }
-	s = malloc(sizeof(char*) * strlen + 1);
-
-	if (str == 0)
+	for (i = 0; i < str[i]; i++)
+	
+	str = malloc(sizeof(char) * i + 1);
+	
+	if (*str == '\0')
 {
 		return (NULL);
 }
-	_strdup = (s, str);
-	
 	return (str);
 }
