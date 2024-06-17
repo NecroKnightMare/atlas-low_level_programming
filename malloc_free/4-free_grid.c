@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * free_grid - free grid in file 3
  * @grid: grid pointer
@@ -14,4 +15,5 @@ void free_grid(int **grid, int height)
 {
 		free(grid[i]);
 }
+	free(grid);
 }
