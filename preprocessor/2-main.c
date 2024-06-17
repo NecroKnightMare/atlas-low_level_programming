@@ -5,7 +5,8 @@
  *
  * Returns: file name
 **/
-int main(void)
+
+int main(__FILE__)
 {
 	printf("%s\n", __FILE__);
 		return (0);
