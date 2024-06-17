@@ -3,7 +3,7 @@
 /**
  * main - entry point void
  *
- * Returns: file name
+ * Return: file name
 **/
 
 int main(void)
