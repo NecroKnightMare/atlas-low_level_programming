@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * main - void
+ * description: returns file name
  * Returns: file name
 **/
 int main(void)
