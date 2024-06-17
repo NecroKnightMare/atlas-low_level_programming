@@ -6,8 +6,8 @@
  * @argc: reads argv
  * Returns: file name
 **/
-int  main(int argc, char *argv[])
+int  main(void)
 {
-	printf("%s\n", argv[argc]);
+	printf("%s\n", __FILE__);
 		return (0);
 }
