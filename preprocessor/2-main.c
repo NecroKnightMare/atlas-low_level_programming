@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - void
- * description: returns file name
+ * main - entry point
+ * 
  * Returns: file name
 **/
 int main(void)
