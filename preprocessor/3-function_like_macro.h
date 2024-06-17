@@ -1,7 +1,7 @@
 #ifndef FUNCTION_LIKE_MACRO_H
 #define FUNCTION_LIKE_MACRO_H
 
-#define ABS (x)
+#define ABS(x)
 
 /**
  * main - entry point
