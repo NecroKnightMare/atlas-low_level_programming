@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - title of file
+ * main - file name
  * Returns: file name
 **/
-int  main(void)
+int  main()
 {
 	printf("%s\n", __FILE__);
 		return (0);
