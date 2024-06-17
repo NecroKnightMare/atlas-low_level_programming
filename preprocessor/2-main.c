@@ -2,8 +2,6 @@
 #include <stdio.h>
 /**
  * main - title of file
- * @argv: reads argc
- * @argc: reads argv
  * Returns: file name
 **/
 int  main(void)
