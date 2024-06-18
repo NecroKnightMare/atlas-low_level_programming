@@ -2,6 +2,9 @@
 #define DOG_H
 /**
  * struct - defining dog as a structure for main file
+ *@name: name of dog
+ *@age: age of dog
+ *@owner: owners name
  * description: defining dog characteristics
 **/
 typedef struct dog
