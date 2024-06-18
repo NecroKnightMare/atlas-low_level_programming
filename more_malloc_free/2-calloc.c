@@ -8,19 +8,21 @@
 **/
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int i;
-	int s;
+	int i = 0;
+	int b = 0;
 	char *call_s;
+
+	b = nmemb * size;
 
 	if (size == 0 && nmemb == 0)
 {
 		return(NULL);
 }
-	call_s = calloc(sizeof(nmemb), sizeof(size));
+	call_s = malloc(b);
 
-	for (i = 0; i < s; i++)
+	while (i < b)
 {
-		s++;
+		i++;
 		call_s[i] = 0;
 }
 	if (call_s == NULL)
