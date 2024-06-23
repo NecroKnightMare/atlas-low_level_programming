@@ -15,6 +15,7 @@ struct dog
 };
 
 /**
+ * init_dog - dog initialization
  * @d: dog
  * @name: name of dog
  * @age: age of dog
