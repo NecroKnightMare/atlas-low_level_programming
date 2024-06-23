@@ -7,11 +7,17 @@
  *@owner: owners name
  * description: defining dog characteristics
 **/
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog_t;
+};
+
+/**
+ * putting prototypes here to avoid type/function conflicts
+**/
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
 
 #endif
