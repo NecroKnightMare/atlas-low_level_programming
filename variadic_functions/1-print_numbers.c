@@ -10,8 +10,9 @@
 **/
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	int i;
 	va_list num;
+	int i;
+	const char *strings;
 
 	va_start(num, n);
 	if (n > 0)
@@ -25,7 +26,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	if (seperator != NULL && n > 1)
 {
 			printf("%s", seperator);
+
+			while ((strings = va_arg(seperator, const char *))!= NULL)
+{
+				printf("%s", strings);
 }
+}
+
 
 	printf('\n');
 	va_end(num);
