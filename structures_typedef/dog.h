@@ -15,6 +15,11 @@ struct dog
 };
 
 /**
+ * @d: dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: dog owner
+ *
  * putting prototypes here to avoid type/function conflicts
 **/
 void init_dog(struct dog *d, char *name, float age, char *owner);
