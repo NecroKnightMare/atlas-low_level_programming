@@ -4,7 +4,7 @@
 #include <stdlib.h>
 /**
  * print_numbers - print numb followed by new line
- * @seperator: string printed between numbers
+ * @separator: string printed between numbers
  * @n: number of integers
  * Return: void
 **/
