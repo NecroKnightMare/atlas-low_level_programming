@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -10,8 +10,7 @@
 **/
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] =
-{
+	op_t ops[] = {
 	{"+", op_add},
 	{"-", op_sub},
 	{"*", op_mul},
@@ -21,8 +20,11 @@ int (*get_op_func(char *s))(int, int)
 };
 	int i;
 
-	if (s != i)
+
+	if (s != ops)
 {
+		printf("Error\n", s);
 		return (NULL);
+		exit (98);
 }
 
