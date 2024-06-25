@@ -8,18 +8,26 @@
  *
  *
 **/
-int main (void)
+int main(int argc, char *argv[])
 {
-	char operator;
-	double num1, num2;
+	int num1, num2;
+	char *sign;
 
-	printf("Enter the operator you need: ");
-	scanf("%c\n", &operator);
+	if (argc != 4)
+{
+		printf("Error\n");
+		exit(98);
+}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	sign = argv[2];
 
-	printf("Enter first number: ");
-	scanf("%lf", &num1);
-	printf("Enter second number: ");
-	scanf("%lf", &num2);
-	
+	if (!sign)
+{
+		printf("Error\n");
+		exit(99);
+}
+	printf("%d\n", get_op_func(sign)(num1, num2));
+
 	return (0);
 }

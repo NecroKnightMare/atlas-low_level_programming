@@ -19,11 +19,15 @@ int (*get_op_func(char *s))(int, int)
 	{"%", op_mod},
 	{NULL, NULL}
 };
-	int i = 0;
+	int i, len;
 
-	while (i < 5)
+	len = sizeof(ops)/sizeof(op_t);
+
+	i = 0;
+
+	while (i < len)
 {
-		if (strcmp(ops[i].op, s) == 0)
+		if (s == 0)
 {
 			return (ops[i].f);
 			i++;
