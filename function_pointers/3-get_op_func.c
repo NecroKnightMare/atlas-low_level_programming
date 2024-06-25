@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *
- *
- *
- *
- *
+ * get_op_func - call
+ *@s: pointer
+ *@int: num1
+ *@int: num2
+ *Return: array of pointer
 **/
 int (*get_op_func(char *s))(int, int)
 {

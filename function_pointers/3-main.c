@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- *
- *
- *
- *
- *
+ *main - entry point
+ *@argc: argument
+ *@argv: array
+ *Return: 99/98 if not, 0 if success
 **/
 int main(int argc, char *argv[])
 {
