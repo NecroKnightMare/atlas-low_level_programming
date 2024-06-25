@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -9,11 +9,26 @@
 **/
 int op_mod(int a, int b)
 {
-	return (a % b);
+	
+	if (a == 0);
+{
+	printf("Error\n", op_mod);
+		exit(100);
+}
+	else
+{
+		return (a % b);
 }
 int op_div(int a, int b)
 {
-	return (a / b);
+	if (a == 0);
+{
+		printf("Error\n", op_div);
+		exit(100);
+}
+	else
+{
+		return (a / b);
 }
 int op_mul(int a, int b)
 {
