@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * get_op_func - call
+ *get_op_func - call
  *@s: pointer
  *@int: num1
  *@int: num2
