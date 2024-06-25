@@ -10,25 +10,27 @@
 int op_mod(int a, int b)
 {
 	
-	if (a == 0);
+	if (a == 0)
 {
-	printf("Error\n", op_mod);
+	printf("Error\n");
 		exit(100);
 }
 	else
 {
 		return (a % b);
 }
+}
 int op_div(int a, int b)
 {
-	if (a == 0);
+	if (a == 0)
 {
-		printf("Error\n", op_div);
+		printf("Error\n");
 		exit(100);
 }
 	else
 {
 		return (a / b);
+}
 }
 int op_mul(int a, int b)
 {
