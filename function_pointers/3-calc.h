@@ -1,9 +1,9 @@
 #ifndef _CALC_H
 #define _CALC_H
 /**
+ *op - struct
  *
- *
- *
+ *description: typedef op_t
 **/
 typedef struct op
 {
@@ -11,10 +11,10 @@ typedef struct op
     int (*f)(int a, int b);
 } op_t;
 /**
- *
- *
- *
- *
+ *op_mode - prototypes
+ *@a: first value
+ *@b: second value
+ *description: header file with prototypes
 **/
 int op_mod(int a, int b);
 int op_div(int a, int b);
