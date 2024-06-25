@@ -13,7 +13,7 @@ int main (void)
 	char operator;
 	double num1, num2;
 
-	printf("Enter the operator you need (+ - * / %) : ");
+	printf("Enter the operator you need (+, -, *, /, %,) : ");
 	scanf("%c\n", &operator);
 
 	printf("Enter first number: ");
