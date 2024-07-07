@@ -34,5 +34,6 @@ list_t *add_node(list_t **head, const char *str)
 		*head = s;/**pointer to head equals string**/
 		i++;/**increment through string to duplicate**/
 }
+	s++;
 	return (*head); /**return string thats dup into node head**/
 }
