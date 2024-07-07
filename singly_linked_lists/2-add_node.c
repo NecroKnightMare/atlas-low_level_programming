@@ -11,27 +11,22 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *s; /*pointer to string*/
-	size_t len = 0; /* size of sll*/
+	unsigned int len = 0; /* size of sll*/
 	
 	while (str[len] != '\0')
 {
-	len++;
+		len++;
 	
-	s = malloc(sizeof(list_t)); /** pointer  will need the size of node**/
-	
-        s->str = strdup(str);/**duplicate str into node**/
-	
-	if (s->str == NULL)
+		s = malloc(sizeof(list_t)); /** pointer  will need the size of node**/
+		if (!s)/**if not s free space and ret null**/
 {
 		free(s);
 		return (NULL);
 }
-		else
-{
+		s->str = strdup(str);/**dup string into new node called s**/
 		s->len = len;/**pointer length equals incremented string**/
 		s->next = *head;/**next node equals head pointer of sll**/
 		*head = s;/**pointer to head equals string**/
-}
 }
 	return (*head); /**return string thats dup into node head**/
 }
