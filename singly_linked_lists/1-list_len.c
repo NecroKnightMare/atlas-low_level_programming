@@ -11,10 +11,12 @@
 size_t list_len(const list_t *h)
 {
 	size_t i;
-
-	for(i = 0; h; i++)
+	while (h != NULL)
 {
-		_putchar(h->);
+		for(i = 0; h; i++)
+{
+			h = h->next;
 }
-	return (h);
+}
+	return (i);
 }
