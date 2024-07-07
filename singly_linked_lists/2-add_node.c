@@ -17,11 +17,16 @@ list_t *add_node(list_t **head, const char *str)
 	
 	while (s == NULL)/**parameter of task**/
 {
-		free(s);
+		free(s);/**free space**/
                 return (NULL);
 }
         s->str = strdup(str);/**duplicate str into node**/
 	
+	if (s->str == NULL)
+{
+		free(s);
+		return (NULL);
+}
 		while (str[i])
 {
 		s->len = i;/**pointer length equals incremented string**/
