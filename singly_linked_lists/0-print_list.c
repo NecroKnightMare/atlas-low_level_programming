@@ -1,6 +1,7 @@
-#include "main.h"
+#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 /**
  * print_list - prints all elements of list_t
  *h: pointer to node in ssl
@@ -8,10 +9,17 @@
 **/
 size_t print_list(const list_t *h)
 {
+	char *str = 0;
+	size_t num;
+
 	if (str == NULL)
 {
 		printf("[0] (nil)");
-		else
+}
+	for (num = 0; h; num++)
 {
-			return(h);
+			printf("[%d] %s\n", h->len, h->str);
+			h = h->next;
+}
+	return (num);
 }
