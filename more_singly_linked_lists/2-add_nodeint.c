@@ -15,7 +15,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	new = malloc(sizeof(listint_t)); /** pointer  will need the size of node**/
 
-	if (!new)/**if not s free space and ret null**/
+	if (new == NULL)/**if not s free space and ret null**/
 {
 		return (NULL);
 }
