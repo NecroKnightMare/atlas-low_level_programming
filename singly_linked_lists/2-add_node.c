@@ -11,7 +11,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *s; /*pointer to string*/
-	size_t i; /* size of sll*/
+	size_t i = 0; /* size of sll*/
 	
 	s = malloc(sizeof(list_t)); /** pointer  will need the size of node**/
 	
@@ -21,11 +21,12 @@ list_t *add_node(list_t **head, const char *str)
 }
         s->str = strdup(str);/**duplicate str into node**/
 	
-		for(i = 0; str[s]; i++)/**increment through sll**/
+		while (str[i])
 {
-		s->len = str;/**pointer lebgth equals string**/
+		s->len = i;/**pointer length equals incremented string**/
 		s->next = *head;/**next node equals head pointer of sll**/
 		*head = s;/**pointer to head equals string**/
+		i++;/**increment through string to duplicate**/
 }
-	return (head); /**return string thats dup into node head**/
+	return (*head); /**return string thats dup into node head**/
 }
