@@ -13,7 +13,6 @@ size_t print_list(const list_t *h)
 	
 	if (h == NULL)
 {
-		printf(h->len);
 }
 	for (num = 0; h; num++)
 {
