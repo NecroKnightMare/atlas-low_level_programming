@@ -27,7 +27,7 @@ list_t *add_node(list_t **head, const char *str)
 		free(s);
 		return (NULL);
 }
-		while (str[i])
+		while (str[i] != '\0')
 {
 		s->len = i;/**pointer length equals incremented string**/
 		s->next = *head;/**next node equals head pointer of sll**/
