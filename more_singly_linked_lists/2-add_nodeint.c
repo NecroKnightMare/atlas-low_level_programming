@@ -22,5 +22,5 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	new->n = n;/**pointer new is now new node**/
 	new->next = *head;/**next node equals head pointer of sll**/
 	*head = new;/**pointer to head equals new node**/
-	return (*head); /**return string into node head**/
+	return (new); /**return new node**/
 }
