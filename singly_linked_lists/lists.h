@@ -22,11 +22,7 @@ typedef struct list_s
  *c: character
  *Return: character
 **/ 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
+int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
