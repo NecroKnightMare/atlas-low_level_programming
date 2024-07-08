@@ -10,14 +10,14 @@
 **/
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *s;/**end node**/
-	list_t *tmp = *head;/**temporary node**/
+	listint_t *s;/**end node**/
+	listint_t *tmp = *head;/**temporary node**/
 	unsigned int len;
 	
 	for (len = 0; str[len]; len++)
 {
 }
-	s = malloc(sizeof(list_t));/**allocate memory at end**/
+	s = malloc(sizeof(listint_t));/**allocate memory at end**/
 
 	if (!s)/**if not new node**/
 {
