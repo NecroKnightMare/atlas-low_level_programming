@@ -15,13 +15,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	
 	tmp = *head;
 
-	while (tmp && tmp->next != NULL)/**if not new node**/
+	while (tmp != NULL)/**if not new node**/
 {
 		tmp = tmp->next;
 }
 	end = malloc(sizeof(listint_t));/**allocate memory at end**/
 	
-	if (tmp == NULL)
+	if (end == NULL)
 {
 	return (NULL);
 }
