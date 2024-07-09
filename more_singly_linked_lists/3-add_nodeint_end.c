@@ -14,28 +14,21 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	listint_t *tmp;/**temporary node**/
 
+	tmp = *head;
+
 	end = malloc(sizeof(listint_t));/**allocate memory at end**/
 
 	if (end == NULL)
 {
 		return (NULL);
 }
-	if (tmp != NULL)/**if not new node**/
-{
-		tmp = *head;
-
-		while (tmp->next != NULL)
+	while (tmp->next != NULL)
 {
 		tmp = tmp->next;
-}
-	tmp->next = end;/**head pointer will equal to end node**/
-}
-	else
-{
+		tmp->next = end;/**head pointer will equal to end node**/
 		*head = end;
 }
 	end->next = NULL;
-	end->n = n;
-
+	end ->n = n;
 	return (end);
 }
