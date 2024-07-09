@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
- *
+ *binary_to_uint - turn bin into unsign int
+ *@b: pointer to binary in given main
+ *Return: the converted number, or 0 if b is null and b isnt 1 or 0
 **/
 unsigned int binary_to_uint(const char *b)
 {
