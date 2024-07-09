@@ -3,27 +3,29 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
- *
+ *get_nodeint_at_index - get node at index
+ *@head: head of sll
+ *@index: counter
+ *Return: count
 **/
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
-	listint_t *tmp = head;
+	listint_t *tmp;
 
-	if (!tmp)
+	tmp = head;
+
+	while (i < index)
 {
-		return (NULL);
-}
-	while(tmp)
-{
-		if (i < index)
+		if (tmp)
 {
 			tmp = tmp->next;
+}
+		else
+{
+			return (NULL);
 			i++;
 }
 }
-	return(tmp);
+	return (tmp);
 }
