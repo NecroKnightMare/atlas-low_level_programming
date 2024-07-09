@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
- *
- *
+ *clear_bit - clear bits to use mask for int
+ *@n: pointer of value
+ *@index: use of index
+ *Return: 1 if it worked, or -1 if an error occurred
 **/
 int clear_bit(unsigned long int *n, unsigned int index)
 {
