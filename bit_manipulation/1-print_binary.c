@@ -2,10 +2,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- *
- *
- *
- *
+ *print_binary - print into binary
+ *@n: value
+ *Returns: 1 if it worked, or -1 if an error occurred
 **/
 void print_binary(unsigned long int n)
 {
