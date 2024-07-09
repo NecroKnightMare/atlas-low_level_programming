@@ -4,7 +4,7 @@
  *set_bit - set bit to 1
  *@n: value
  *@index: given index
- *Returns: 1 if it worked, or -1 if an error occurred
+ *Return: 1 if it worked, or -1 if an error occurred
 **/
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -19,7 +19,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 }
 	m = 1 << index;/**sets mask to one at the given index**/
 
-	*n = *n| m;/**new value of pointer**/
+	*n = *n | m;/**new value of pointer**/
 
 	return (1);
 }
