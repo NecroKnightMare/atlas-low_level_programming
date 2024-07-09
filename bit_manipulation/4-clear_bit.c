@@ -9,7 +9,7 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned int size;
-	unsigned mask;
+	unsigned int mask;
 
 	size = (sizeof(n) * 8 - 1);
 
@@ -18,8 +18,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 }
 	mask = 1 << index;/**sets mask to one at the given index**/
-	
-	*n = *n & ~mask;/**The ~ (bitwise NOT) in C takes one number and inverts all bits of it.**/
+
+	*n = *n & ~mask;/**The ~ (NOT) in C takes one number and inverts bits**/
 
 	return (1);
 }
