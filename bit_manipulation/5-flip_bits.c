@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
- *
- *
+ *flip_bits - flip int to bits
+ *@n: value 1
+ *@m: value 2
+ *Return: bits
 **/
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int bits = 0;
 	unsigned long int i = 0;
-	unsigned long size;
+	unsigned long int size;
 
 	size = (sizeof(n) * 8 - 1);/**copied again from file 1**/
 
