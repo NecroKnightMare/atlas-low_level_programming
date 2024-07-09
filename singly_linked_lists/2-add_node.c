@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "lists.h" 
+#include "lists.h"
 /**
  *list_t *add_node - adding node to sll
  *@head: head of list
@@ -17,14 +17,15 @@ list_t *add_node(list_t **head, const char *str)
 {
 		len++;
 
-	new = malloc(sizeof(list_t)); /** pointer  will need the size of node**/		
+	new = malloc(sizeof(list_t)); /** pointer  will need the size of node**/
+
 	if (new == NULL)
 {
 		free(new);
 		return (NULL);
 }
 	new->str = strdup(str);/**dup string into new node called s**/
-	
+
 	if (new->str == NULL)
 {
 		free(new);
