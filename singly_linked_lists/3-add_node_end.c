@@ -3,17 +3,17 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
- *
+ *add_node_end - add node at the end of sll
+ *@str: pointer to string
+ *@head: pointer to a pointer, head of node
+ *Return: the address of new node or NULL if failure
 **/
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *s;/**end node**/
 	list_t *tmp = *head;/**temporary node**/
 	unsigned int len;
-	
+
 	for (len = 0; str[len]; len++)
 {
 }
@@ -33,7 +33,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	*head = s;/**head pointer will equal to end node**/
 	return (s);
 }
-
 	while (tmp->next)/**tmp will be next node to create space for string**/
 {
 		tmp = tmp->next;/**tmp is next node**/
