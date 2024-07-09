@@ -17,13 +17,17 @@ int create_file(const char *filename, char *text_content)
 	int length = 0;
 	int count = 0;
 
-	if (!filename || filename == NULL)
+	if (filename)
+{
+	file = open(filename, O_CREAT |  O_WRONLY | O_TRUNC, 600);
+}
+	if (filename == NULL)
 {
 		return (-1);
 }
 	if (text_content == NULL)
 {
-		file = open(filename, O_CREAT |  O_WRONLY | O_TRUNC , 600);
+		file = open(filename, O_CREAT |  O_WRONLY | O_TRUNC, 600);
 }
 	if (text_content != NULL)
 {
