@@ -3,14 +3,14 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
- *
+ *sum_listint - sums all data in sll
+ *@head: head of sll
+ *Return: sum
 **/
 int sum_listint(listint_t *head)
 {
 	int count;
+
 	if (!head)
 {
 	return (0);
