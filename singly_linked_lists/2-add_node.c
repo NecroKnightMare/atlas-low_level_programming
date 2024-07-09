@@ -24,7 +24,12 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 }
 	new->str = strdup(str);/**dup string into new node called s**/
-
+	
+	if (new->str == NULL)
+{
+		free(new);
+		return (NULL);
+}
 	new->len = len;/**pointer length equals incremented string**/
 	new->next = *head;/**next node equals head pointer of sll**/
 	*head = new;
