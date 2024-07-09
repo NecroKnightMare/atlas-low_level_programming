@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *get_bit - gets the bit value of an index
+ * get_bit - gets the bit value of an index
  *@n: is a value of a positive number
  *@index: a given number
  *
