@@ -32,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
 }
 	new->len = len;/**pointer length equals incremented string**/
 	new->next = *head;/**next node equals head pointer of sll**/
-	*head = new;
 }
+	*head = new;
 	return (*head); /**return string thats dup into node head**/
 }
