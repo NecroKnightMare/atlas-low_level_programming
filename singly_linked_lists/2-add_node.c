@@ -20,6 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	new = malloc(sizeof(list_t)); /** pointer  will need the size of node**/		
 	if (new == NULL)
 {
+		free(new);
 		return (NULL);
 }
 	new->str = strdup(str);/**dup string into new node called s**/
