@@ -9,7 +9,7 @@
 **/
 void free_list(list_t *head)
 {
-	if (head->str == NULL)
+	if (head)
 {
 		free(head->next);
 		if (head->str)
