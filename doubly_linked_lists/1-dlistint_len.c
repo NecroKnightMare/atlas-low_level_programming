@@ -9,7 +9,7 @@
 **/
 size_t dlistint_len(const dlistint_t *h)/**print length of LL**/
 {
-	size_t length;/**use length for readability**/
+	int length;/**use length for readability**/
 
 	while (h)/**while DLL--**/
 {
