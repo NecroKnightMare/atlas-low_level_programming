@@ -11,23 +11,18 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;/**new node**/
-	dlistint_t *tmp;
+
+	new = *head;/**new pointer = head pointer**/
 
 	new = malloc(sizeof(dlistint_t));/**grab size of node**/
 
-	if (head == NULL)/** if head is at hte beginning of DLL**/
+	if (new == NULL)/**if new fails and = NULL**/
 {
-		tmp = (*head)->next;/**temp = head going into next**/
-		(*head)->next = new;/**then head going into newxt = new node**/
-		tmp->prev = new;/**temp goes into previous that = new node**/
-
-		new->prev = (*head);/**now new that went into prev now = head**/
-		new->next = tmp;/**new going into next = temp node**/
-		new->n = n;/**new node goes into data node and = data**/
+		return (NULL);
 }
-		else
-{
-		return (NULL);/**if not return NULL when fail**/
-}
-	return (new);/**return new node that = data**/
+	new->n = n;/**new goes into n(data) and replaces data**/
+	new->next = *head;/**the new goes into next and = head p**/
+	*head = new;/**pointer = new node**/
+	
+	return(*head);/**return pointer address**/
 }
