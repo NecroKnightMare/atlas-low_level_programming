@@ -23,6 +23,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	new->n = n;/**new goes into n(data) and replaces data**/
 	new->next = *head;/**the new goes into next and = head p**/
 	*head = new;/**pointer = new node**/
-	
+
 	return(*head);/**return pointer address**/
 }
