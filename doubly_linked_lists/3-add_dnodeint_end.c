@@ -11,19 +11,25 @@
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new;/**new node for end will equal tail**/
-		
-	new = *tail;/**new pointer = head pointer**/
 
 	new = malloc(sizeof(dlistint_t));/**grab size of node**/
 
-	if (new == NULL)/**if new fails and = NULL**/
+	new->prev = NULL;
+	new->n = n;
+	new->next = NULL;
+
+	if (*head == NULL)
 {
+		*head = new;
 		return (NULL);
 }
-	/**add tail somewhere**/
-	new->n = n;/**new goes into n(data) and replaces data**/
-	new->next = *tail;/**the new goes into next and = head p**/
-	*tail = new;/**pointer = new node**/
+	dlistint_t *tail = head;
 
-	return(*tail);/**return pointer address**/
+	while (tail->next != NULL)
+{
+		tail = tail->next;
+		tail->next = new;
+		new->prev = tail;
+}
+	return (new);
 }

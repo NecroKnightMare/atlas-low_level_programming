@@ -3,37 +3,33 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *dlistint_t new_node - make new node
+ *add_dnodeint - make new node at beginning
  *@n: data
  *Return: new node
 **/
-dlistint_t *NodeN(int data)
-{
-	dlistint_t* new = (dlistint_t *)malloc(sizeof(dlistint_t));
-	
-	new->n = data;
-	new->prev = NULL;
-	new->next = NULL;
-	return (new);
-}
-/**
- *add_dnodeint - add node at the beginning
- *@head: head of DLL
- *@n: data value of DLL
- *Return: the address of the new element or NULL if fail
-**/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new = NodeN(n);/**recall for size of struct of node**/
+	dlistint_t* new;
 
-	if (*head == NULL)/**if new fails and = NULL**/
+	new = malloc(sizeof(dlistint_t));
+
+	if (!new)
 {
-		*head = new;/**pointer wil equal new node**/
-		return (NULL);/**if fail**/
+		return (NULL);
 }
-	(*head)->prev = new;/**pointer goeas into prev and is the new node**/
-	new->next = *head;/**the new goes into next and = head p**/
-	*head = new;/**pointer = new node**/
-
-	return(*head);/**return pointer address**/
+	new->prev = NULL;
+	new->n = n;
+	new->next = NULL;
+	
+	if (*head == NULL )
+{
+		*head = new;
+}
+	else
+{
+	new->next = *head;
+	(*head)->prev = new;
+	*head = new;
+}
+	return (new);
 }
