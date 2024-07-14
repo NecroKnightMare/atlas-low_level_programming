@@ -3,20 +3,25 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
- *
+ *free_dlistint - free elements in DLL
+ *@head: pointer to DLL
+ *Return: void
 **/
 void free_dlistint(dlistint_t *head)
 {
-	if (head)
+	dlistint_t *rem;
+
+	if (head == NULL)
 {
-		free_list(head->next);
-		if (head->str)
+		return;
+}
+	rem = head;
+
+	while (rem->next != NULL)
 {
-			free(head->str);
-			free(head);
+		rem = rem->next;
+		free(rem->prev);
 }
-}
+	free(rem);
+	head = NULL;
 }
