@@ -3,13 +3,13 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
+ *sum_dlistint - get sum of elements
+ *@head: pointer ro DLL
+ *Return: return sum
 **/
 int sum_dlistint(dlistint_t *head)
 {
-	int count = 0;
+	int sum = 0;
 
 	if (!head)
 {
@@ -17,8 +17,8 @@ int sum_dlistint(dlistint_t *head)
 }
 	while (head)
 {
-		count += head->n;
+		sum += head->n;
 		head = head->next;
 }
-	return (count);
+	return (sum);
 }
