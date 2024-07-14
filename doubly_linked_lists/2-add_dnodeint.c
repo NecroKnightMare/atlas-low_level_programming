@@ -4,7 +4,7 @@
 #include "lists.h"
 /**
  *add_dnodeint - make new node at beginning
- *head: head address of DLL
+ **head: head address of DLL
  *@n: data
  *Return: new node
 **/
