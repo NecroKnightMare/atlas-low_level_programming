@@ -4,8 +4,8 @@
 #include "lists.h"
 /**
  *add_dnodeint - make new node at beginning
- **head: head address of DLL
  *@n: data
+ *@head: address of DLL
  *Return: new node
 **/
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
