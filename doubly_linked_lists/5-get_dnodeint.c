@@ -3,54 +3,34 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *
- *
- *
+ *get_dnodeint_at_index - grab node at a spec area
+ *@head: pointer to DLL
+ *@index: position in chain
+ *Return: return index
 **/
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-{
 	unsigned int count = 1;
-	listint_t *tmp;
-	listint_t *new;
+	/**listint_t *new;**/
+	dlistint_t *tmp;
 
-	idx = 0;
+	index = 0;
+	tmp = head;
 
-	if (head == NULL)
+	while (count < index)
 {
-		return (NULL);
-}
-	tmp = *head;
 
-	while (tmp && count < idx)
+		if (tmp)
 {
 		tmp = tmp->next;
 		count++;
 }
-	new = malloc(sizeof(listint_t));
+	/**new = malloc(sizeof(listint_t));**/
 
-	if (new == NULL)
+	if (!tmp)
 {
-		free(new);
 		return (NULL);
 }
-	new->n = n;
-
-	if (count == 0)
-{
-		*head = new;
-		new->next = tmp;
 }
-		else if (tmp->next)
-{
-			new->next = tmp->next;
-			tmp->next = new;
-}
-		else
-{
-			new->next = NULL;
-			tmp->next = new;
-}
-	return (new);
-}
+	return (tmp);
 }
