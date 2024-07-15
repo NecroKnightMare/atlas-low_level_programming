@@ -35,13 +35,13 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (temp->prev != NULL)
 {
 			(*head)->prev->next = (*head)->next;
-			/**free(temp); will see if not needed**/
+			free(temp->prev);/**will see if not needed**/
 			return (1);/**changed to 1**/
 }
 		if (temp->next != NULL)
 {
 			(*head)->next->prev = (*head)->prev;
-			free(temp->next);/**??**/
+			/**free(temp->next);aborted**/
 			return (1);
 }
 	/**free();need to free next node**/
