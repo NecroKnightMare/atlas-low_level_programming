@@ -28,6 +28,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 }
 		temp = *head;
+		while (index > 0 && temp)/**new loop block to deal with extra elements**/
+{
+			temp = temp->next;
+			index--;
+}
 		if (!temp)
 {
 			return (1);/**changed--out of range handle?**/
