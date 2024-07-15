@@ -11,6 +11,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp;
+	/**unsigned int count = 0; will add if while loop doesn't work**/
 
 	if (!*head)
 {
@@ -48,5 +49,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (1);
 }
 	/**free(temp);is this the extra free**/
-	return (-1);/**worked...im confused**/
+	return (-1);
 }
