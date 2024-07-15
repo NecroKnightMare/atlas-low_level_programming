@@ -31,11 +31,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (!temp)
 {
 			return (-1);/**changed--out of range handle?--again**/
-}
 		if (temp->prev != NULL)
 {
 			(*head)->prev->next = (*head)->next;
-			free(temp->prev);/**will see if not needed**/
+			/**free(temp->prev); still causes mem leak**/
 			return (1);/**changed to 1**/
 }
 		if (temp->next != NULL)
@@ -43,6 +42,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			(*head)->next->prev = (*head)->prev;
 			/**free(temp->next);aborted**/
 			return (1);
+}
 }
 	/**free();need to free next node**/
 	return (-1);
