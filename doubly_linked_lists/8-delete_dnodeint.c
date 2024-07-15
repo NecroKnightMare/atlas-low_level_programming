@@ -29,6 +29,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		temp = *head;
 		if (!temp)
 {
+			free(temp);
 			return (-1);/**changed--out of range handle?--again**/
 }
 		if (temp->prev != NULL)
