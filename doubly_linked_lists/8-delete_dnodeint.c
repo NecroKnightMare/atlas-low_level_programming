@@ -40,7 +40,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (temp->next != NULL)
 {
 			(*head)->next->prev = (*head)->prev;
-			free(temp);
 			return (1);
 }
 	/**free(head);leaking mem added free- didn't work**/
