@@ -11,7 +11,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp;
-	/**unsigned int count = 0; will add if while loop doesn't work**/
+	unsigned int count = 0;/**will add if while loop doesn't work**/
 
 	if (!*head)
 {
@@ -29,10 +29,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 }
 		temp = *head;
-		while (index > 0 && temp)/**new loop block to deal with extra elements**/
+		while (count < index)/**new loop block to deal with extra elements**/
 {
 			temp = temp->next;
-			index--;
+			count++;
 }
 		if (!temp)
 {
