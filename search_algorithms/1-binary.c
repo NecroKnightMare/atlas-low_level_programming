@@ -27,8 +27,6 @@ int binary_search(int *array, size_t size, int value)
 {
 			printf(", ");
 }
-}
-}
 	printf("\n");
 
 	midd = (left + right) / 2;
@@ -44,6 +42,8 @@ int binary_search(int *array, size_t size, int value)
 	else
 {
 	right = midd -1;
+}
+}
 }
 	return (-1);
 }
