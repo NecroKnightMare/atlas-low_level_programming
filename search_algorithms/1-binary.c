@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- *binary_search - algorithm 
+ *binary_search - algorithm
  *@array: array
  *@size: size of array
  *@value: value of output
@@ -37,7 +37,7 @@ int binary_search(int *array, size_t size, int value)
 	else if (array[midd] < value)
 	left = midd + 1;
 	else
-	right = midd -1;
+	right = midd - 1;
 }
 	return (-1);
 }
