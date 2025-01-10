@@ -1,0 +1,12 @@
+# same executable
+EXEC = school
+
+# Compiler variable
+CC = gcc
+
+# file variable
+SRC = main.c school.c
+
+# rule still all
+all:
+	$(CC) $(SRC) -o $(EXEC)
