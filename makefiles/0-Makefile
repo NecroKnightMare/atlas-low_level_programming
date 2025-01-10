@@ -1,0 +1,6 @@
+# executable school
+EXEC = school
+
+# rule all
+all:
+	gcc main.c school.c -o $(EXEC)
