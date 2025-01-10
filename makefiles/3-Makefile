@@ -1,0 +1,30 @@
+#variables: Compiler
+CC = gcc
+
+#: .c files
+SRC = main.c school.c
+
+#: turn .c into .o
+OBJ = $(SRC:.c=.o)
+
+#: Name
+NAME = school
+
+# Delete files
+RM = rm -f
+
+#Rule; % turns .c to .o; recompiles, removes, cleans and then rebuilds
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+clean:
+	$(RM) *~ $(OBJ) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean oclean fclean re
