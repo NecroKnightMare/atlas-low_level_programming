@@ -5,7 +5,7 @@ CC = gcc
 SRC = main.c school.c
 
 #: turn .c into .o
-OBJ = $(SRC: .c=.o)
+OBJ = $(SRC:.c=.o)
 
 #: Name
 NAME = school
