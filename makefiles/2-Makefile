@@ -1,0 +1,28 @@
+# executable school; had same variable name error
+#EXEC = school
+
+#variables: Compiler
+CC = gcc
+
+#: .c files
+SRC = main.c school.c
+
+#: turn .c into .o
+OBJ = $(SRC: .c=.o)
+
+#: Name
+NAME = school
+
+#Rule; % turns .c to .o
+all:	$(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	&(CC) -c -o $@ $<
+
+clean:
+	rm -f $(OBJ) $(NAME)
+
+.PHONY: all clean
