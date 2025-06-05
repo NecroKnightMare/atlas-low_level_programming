@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "hash_tables.h"
+
 /**
  *hash_table_print - print has table keys and values
  *@ht: pointer to hash table
