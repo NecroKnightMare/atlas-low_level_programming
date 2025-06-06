@@ -4,6 +4,7 @@
 #include "hash_tables.h"
 
 /*go through and test to see if its accurate--reveerse string function needs work*/
+/*gcc -o 100-sorted_hash_table_0 -Wall -Werror -Wextra -pedantic -std=gnu89 1-djb2.c 2-key_index.c 100-sorted_hash_table.c main_0.c*/
 
 /**
 *Description:
@@ -15,7 +16,7 @@
 
 shash_table_t *shash_table_create(unsigned long int size)
 {
-     	shash_table_t *table = malloc(sizeof(shash_table_t));
+    shash_table_t *table = malloc(sizeof(shash_table_t));
 
 	if (!table)
 {
@@ -23,7 +24,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 	table->size = size;
 
-	table->array = calloc(sizeof(shash_node_t *), table->size);
+	table->array = calloc(table->size, sizeof(shash_node_t *));
 
 	if (!table->array)
 {
@@ -57,7 +58,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 	present = present->next;
 }
-	new = malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(shash_node_t));
 
 	if (!new)
 {
@@ -80,7 +81,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
-     unsigned long int inx;
+	unsigned long int inx;
 	shash_node_t *temp;
 
 	if (!key || !ht)
@@ -105,12 +106,10 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 void shash_table_print(const shash_table_t *ht)
 {
-     	unsigned long int i =0;
-	struct hash_node_s *temp;
+    unsigned long int i =0;
+	struct shash_node_s *temp;
 
-	while (i < ht->size)
-{
-		i++;
+for (i = 0; i < ht->size; i++) { 
 		if (!ht)
 {
 			return;
@@ -130,26 +129,37 @@ void shash_table_print(const shash_table_t *ht)
 
 void shash_table_print_rev(const shash_table_t *ht)
 {
+	shash_node_t *temp;
+	if (!ht) return;
 
+	temp = ht->stail;
+	printf("{");
+	while (temp)
+	{
+		printf("'%s': '%s'", temp->key, temp->value);
+		if (temp->sprev) printf(", ");
+		temp = temp->sprev;
+	}
+	printf("}\n");
 }
+
 
 void shash_table_delete(shash_table_t *ht)
 {
 	unsigned long int inx = 0;
-	struct hash_node_s *temp;
+	struct shash_node_s *temp;
 
-	while (inx < ht->size)
-{
-	inx++;
-	while (ht->array[inx])
-{
-		temp = ht->array[inx];
-		ht->array[inx] = ht->array[inx]->next;
-		free(temp->key);
-		free(temp->value);
-		free(temp);
-}
-}
+for (inx = 0; inx < ht->size; inx++)
+	{
+		while (ht->array[inx])
+		{
+			temp = ht->array[inx];
+			ht->array[inx] = ht->array[inx]->next;
+			free(temp->key);
+			free(temp->value);
+			free(temp);
+		}
+	}
 	free(ht->array);
 	free(ht);
 }
