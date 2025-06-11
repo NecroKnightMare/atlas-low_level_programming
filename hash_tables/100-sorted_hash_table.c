@@ -127,8 +127,8 @@ void shash_table_print(const shash_table_t *ht)
 		}
 		while (temp != NULL)
 		{
-			printf("'%s': '%s', ", temp->key, temp->value);
-			temp = temp->next;
+			printf("'%s': '%s'", temp->key, temp->value);
+			temp = temp->snext;/*next vs snext*/
 		}
 	}
 	printf("}\n");
