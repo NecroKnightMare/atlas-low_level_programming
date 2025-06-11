@@ -27,8 +27,10 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 	table->size = size;
 
+	/*table of the array needs to be the size of the address of node*/
 	table->array = calloc(table->size, sizeof(shash_node_t *));
 
+	/*memory leak/collision error handle*/
 	if (!table->array)
 {
 		free(table);
@@ -37,8 +39,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (table);
 }
 
-/*changed insertion strategy*/
-/*if broken grab block from 3-hash_table_set*/
+
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -110,25 +111,27 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (temp->value);
 }
 
+/*error point, commas are no longer printing, insert seperate print statement*/
 void shash_table_print(const shash_table_t *ht)
 {
-	unsigned long int i =0;
+	unsigned long int i = 0;
 	shash_node_t *temp = ht->shead;
 	printf("{");
 
 	while (i < ht->size)
 	{
-	i++;
-	if (!ht)
-	{
-		return;
-	} else {
-		temp = ht->array[i];
+		i++;
+		if (!ht)
+		{
+			return;
+		} else {
+			temp = ht->array[i];
 		}
 		while (temp != NULL)
 		{
 			printf("'%s': '%s'", temp->key, temp->value);
-			temp = temp->snext;/*next vs snext*/
+			printf(", ");/*here is the printing problem, needs to be if snext*/
+			temp = temp->snext;
 		}
 	}
 	printf("}\n");
