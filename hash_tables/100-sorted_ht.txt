@@ -1,0 +1,80 @@
+/*changed insertion strategy it has an infinite loop problem*/
+/*if broken grab block from 3-hash_table_set*/
+int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+{
+	unsigned long int index;
+	shash_node_t *new;
+	shash_node_t *current = ht->shead, *prev = NULL;
+
+
+	if (!ht || !key || !value)
+	{
+		return (0);
+	}
+
+	new = malloc(sizeof(shash_node_t));
+	index = key_index((const unsigned char *)key, ht->size);
+
+	if (!new)
+	{
+		return(0);
+	}
+
+	if (!ht->shead)
+	{
+    	ht->shead = ht->stail = new;
+    	new->snext = new->sprev = NULL;
+	}
+
+	while (current)
+	{
+    if (strcmp(current->key, key) != 0)
+	{
+        free(current->value);
+        current->value = strdup(value);
+    }
+    current = current->snext;
+	}
+
+	new->next = ht->array[index];
+	ht->array[index] = new;
+
+	while (current && strcmp(current->key, key) < 0)
+	{
+			prev = current;
+			current = current->snext;
+	}
+	new->snext = current;
+	new->sprev = prev;
+
+	if (prev)
+	{
+		prev->snext = new;
+	} else {
+		ht->shead = new;
+	}
+	if (current)
+	{
+		current->sprev = new;
+	} else {
+		ht->stail = new;
+	}
+
+	if (!new)
+	{
+		return (0);
+	}
+	new->key = strdup(key);
+	new->value = strdup(value);
+
+	if (!new->key || !new->value)
+	{
+		free(new->key);
+		free(new->value);
+		free(new);
+		return (0);
+	}
+	/*Testing*/
+	/*printf("Inserted: '%s': '%s'\n", new->key, new->value);*/
+	return (1);
+}

@@ -4,7 +4,10 @@
 #include "hash_tables.h"
 
 /*go through and test to see if its accurate--reveerse string function needs work*/
-/*gcc -o 100-sorted_hash_table_0 -Wall -Werror -Wextra -pedantic -std=gnu89 1-djb2.c 2-key_index.c 100-sorted_hash_table.c main_0.c*/
+/*
+gcc -o 100-sorted_hash_table_0 -Wall -Werror -Wextra -pedantic 
+-std=gnu89 1-djb2.c 2-key_index.c 100-sorted_hash_table.c main_0.c
+*/
 
 /**
 *Description:
@@ -34,6 +37,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (table);
 }
 
+/*changed insertion strategy*/
+/*if broken grab block from 3-hash_table_set*/
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -76,10 +81,9 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 	new->next = ht->array[index];
 	ht->array[index] = new;
-	/*Testing*/
-	/*printf("Inserted: '%s': '%s'\n", new->key, new->value);*/
 	return (1);
 }
+
 
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
@@ -109,64 +113,81 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 void shash_table_print(const shash_table_t *ht)
 {
 	unsigned long int i =0;
-	struct shash_node_s *temp;
+	shash_node_t *temp = ht->shead;
+	printf("{");
 
-	for (i = 0; i < ht->size; i++)
-	{ 
-			if (!ht)
-			{
-				return;
-			}
-		else
-		{
-			temp = ht->array[i];
+	while (i < ht->size)
+	{
+	i++;
+	if (!ht)
+	{
+		return;
+	} else {
+		temp = ht->array[i];
 		}
-			while (temp != NULL)
-			{
-				printf("'%s': '%s', ", temp->key, temp->value);
-				temp = temp->next;
-			}
+		while (temp != NULL)
+		{
+			printf("'%s': '%s', ", temp->key, temp->value);
+			temp = temp->next;
+		}
 	}
 	printf("}\n");
 }
 
 void shash_table_print_rev(const shash_table_t *ht)
 {
-	shash_node_t *temp;
+	shash_node_t *node = ht->stail;
+
+	printf("{");
 	if (!ht)
 	{
 		return;
 	}
 
-	printf("{");
-	temp = ht->stail;
-
-	while (temp)
+	while (node)
 	{
-		printf("'%s': '%s'", temp->key, temp->value);
-		if (temp->sprev) printf(", ");
-		temp = temp->sprev;
+		printf("'%s': '%s'", node->key, node->value);
+		if (node->sprev)
+		{
+		printf(", ");
+		node = node->sprev;
+		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
-
 
 void shash_table_delete(shash_table_t *ht)
 {
-	unsigned long int inx = 0;
-	struct shash_node_s *temp;
+	unsigned long int i = 0;
+	shash_node_t *temp, *current;
 
-for (inx = 0; inx < ht->size; inx++)
+	if (!ht)
 	{
-		while (ht->array[inx])
+		return;
+	}
+	current = ht->shead;
+
+	/*Loop to free each node*/
+	while (current)
+	{
+		temp = current->snext;
+		free(current->key);
+		free(current->value);
+		free(current);
+		current = temp;
+	}
+
+	/*Free hash table collisions/buckets*/
+	for (i = 0; i < ht->size; i++)
+	{
+		while (ht->array[i])
 		{
-			temp = ht->array[inx];
-			ht->array[inx] = ht->array[inx]->next;
-			free(temp->key);
-			free(temp->value);
+			temp = ht->array[i];
+			ht->array[i] = ht->array[i]->next;
 			free(temp);
 		}
 	}
+	/*free array and hash table*/
 	free(ht->array);
 	free(ht);
 }
