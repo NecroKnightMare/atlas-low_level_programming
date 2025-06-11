@@ -76,6 +76,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 }
 	new->next = ht->array[index];
 	ht->array[index] = new;
+	/*Testing*/
+	/*printf("Inserted: '%s': '%s'\n", new->key, new->value);*/
 	return (1);
 }
 
@@ -106,34 +108,39 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 
 void shash_table_print(const shash_table_t *ht)
 {
-    unsigned long int i =0;
+	unsigned long int i =0;
 	struct shash_node_s *temp;
 
-for (i = 0; i < ht->size; i++) { 
-		if (!ht)
-{
-			return;
-}
-	else
-{
-		temp = ht->array[i];
-}
-		while (temp != NULL)
-{
-			printf("'%s': '%s', ", temp->key, temp->value);
-			temp = temp->next;
-}
-}
+	for (i = 0; i < ht->size; i++)
+	{ 
+			if (!ht)
+			{
+				return;
+			}
+		else
+		{
+			temp = ht->array[i];
+		}
+			while (temp != NULL)
+			{
+				printf("'%s': '%s', ", temp->key, temp->value);
+				temp = temp->next;
+			}
+	}
 	printf("}\n");
 }
 
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *temp;
-	if (!ht) return;
+	if (!ht)
+	{
+		return;
+	}
 
-	temp = ht->stail;
 	printf("{");
+	temp = ht->stail;
+
 	while (temp)
 	{
 		printf("'%s': '%s'", temp->key, temp->value);
